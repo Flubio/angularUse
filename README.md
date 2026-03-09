@@ -1,59 +1,89 @@
 # AngularUse
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
+Collection of Angular-first composables and state utilities, inspired by the developer experience of VueUse.
 
-## Development server
+## Why this project
 
-To start a local development server, run:
+Angular has powerful primitives (Signals, DI, RxJS), but many apps repeatedly implement similar utility patterns. AngularUse aims to provide reusable, tree-shakeable helpers with strong TypeScript support and a clean API.
 
-```bash
-ng serve
-```
+## Inspiration and credit
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+This project is **inspired by [VueUse](https://github.com/vueuse/vueuse/tree/main)** and its excellent model for ergonomic utility composition.
 
-## Code scaffolding
+Huge credit to the VueUse maintainers and contributors for setting a high bar for API design, docs quality, and open-source stewardship.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Current status
 
-```bash
-ng generate component component-name
-```
+- Early-stage library
+- Core state utilities in progress
+- APIs may evolve before stable release
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Package(s)
 
-```bash
-ng generate --help
-```
+- `ngx-use` — Angular utility library
 
-## Building
+## Getting started
 
-To build the project run:
+### Prerequisites
 
-```bash
-ng build
-```
+- Node.js 20+
+- pnpm 10+
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Install dependencies
 
 ```bash
-ng test
+pnpm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### Build
 
 ```bash
-ng e2e
+pnpm build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Test
 
-## Additional Resources
+```bash
+pnpm test
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Project structure
+
+```text
+projects/
+	ngx-use/
+		src/
+			lib/
+				state/
+					create-global-state/
+```
+
+## Roadmap
+
+- [x] Scaffold library workspace
+- [x] Add `createGlobalState`
+- [ ] Add additional state and browser utilities
+- [ ] Improve API docs and examples
+- [ ] Stabilize v1 surface
+
+## Contributing
+
+Contributions are welcome. Please start with [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+
+Quick flow:
+
+1. Fork the repository
+2. Create a feature branch
+3. Add tests for your changes
+4. Open a pull request
+
+## Acknowledgements
+
+- [VueUse](https://github.com/vueuse/vueuse/tree/main) — primary inspiration
+- Angular team and ecosystem maintainers
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+Please also review our [Code of Conduct](./CODE_OF_CONDUCT.md).

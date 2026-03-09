@@ -1,64 +1,81 @@
-# NgUse
+# ngx-use
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+Angular utility collection focused on composable, typed, and reusable patterns.
 
-## Code scaffolding
+## Inspiration and credit
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+`ngx-use` is inspired by **[VueUse](https://github.com/vueuse/vueuse/tree/main)**.
 
-```bash
-ng generate component component-name
-```
+This project borrows the spirit of small, focused utility APIs and a composition-first developer experience. Full credit to the VueUse team and contributors for the inspiration.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Features (current)
 
-```bash
-ng generate --help
-```
+- Global state utility: `createGlobalState`
+- Angular DI-friendly implementation
+- TypeScript-first APIs
 
-## Building
-
-To build the library, run:
+## Installation
 
 ```bash
-ng build ngUse
+pnpm add ngx-use
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+> Package publication is still in progress. Until published, consume from this repository source.
 
-### Publishing the Library
+## Usage
 
-Once the project is built, you can publish your library by following these steps:
+```ts
+import { inject } from '@angular/core';
+import { CreateGlobalState } from 'ngx-use';
 
-1. Navigate to the `dist` directory:
+const createGlobalState = inject(CreateGlobalState);
 
-   ```bash
-   cd dist/ng-use
-   ```
+const useCounterState = createGlobalState.create(() => {
+   let count = 0;
+   return {
+      get count() {
+         return count;
+      },
+      inc() {
+         count += 1;
+      },
+   };
+});
 
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
+const counter = useCounterState();
+counter.inc();
+```
 
-## Running unit tests
+## API
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### `CreateGlobalState`
+
+Service that memoizes state factory output globally after first invocation.
+
+## Local development
+
+From the workspace root:
 
 ```bash
-ng test
+pnpm install
+pnpm build
+pnpm test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## Publishing (when ready)
 
 ```bash
-ng e2e
+cd dist/ngx-use
+npm publish
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Contributing
 
-## Additional Resources
+Issues and PRs are welcome. Please read the contribution guide first:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [`CONTRIBUTING.md`](../../CONTRIBUTING.md)
+- [`CODE_OF_CONDUCT.md`](../../CODE_OF_CONDUCT.md)
+
+## License
+
+Licensed under the [MIT License](../../LICENSE).
