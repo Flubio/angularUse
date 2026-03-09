@@ -7,6 +7,23 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
+    "paths": {
+      "@ngxUse": [
+        "./dist/ng-use"
+      ],
+      "@ngxUse/shared": [
+        "./dist/ng-use/shared"
+      ],
+      "@ngxUse/shared/*": [
+        "./dist/ng-use/shared/*"
+      ],
+      "@ngxUse/core": [
+        "./dist/ng-use/core"
+      ],
+      "@ngxUse/core/*": [
+        "./dist/ng-use/core/*"
+      ],
+    },
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
@@ -19,7 +36,15 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/ng-use/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ng-use/tsconfig.spec.json"
+    }
+  ]
 }
