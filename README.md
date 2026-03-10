@@ -1,6 +1,6 @@
 # AngularUse
 
-Collection of Angular-first composables and state utilities, inspired by the developer experience of VueUse.
+Collection of Angular-first utilities and state helpers, inspired by the developer experience of VueUse.
 
 ## Why this project
 
@@ -54,14 +54,19 @@ projects/
 	ngx-use/
 		src/
 			lib/
-				state/
-					create-global-state/
+				core/
+					state/
+					di/
 ```
 
 ## Roadmap
 
 - [x] Scaffold library workspace
 - [x] Add `createGlobalState`
+- [x] Add `createProvidedState` (with `createInjectionState` compatibility alias)
+- [x] Add `createSharedState`
+- [x] Add `useAsyncState`
+- [x] Add strongly typed DI token helper (`createTypedToken`)
 - [ ] Add additional state and browser utilities
 - [ ] Improve API docs and examples
 - [ ] Stabilize v1 surface
