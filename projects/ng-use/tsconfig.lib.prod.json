@@ -1,3 +1,0 @@
-{
-  "extends": "../ngx-use/tsconfig.lib.prod.json"
-}

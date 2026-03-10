@@ -9,19 +9,19 @@
     "noImplicitReturns": true,
     "paths": {
       "@ngxUse": [
-        "./dist/ng-use"
+        "./dist/ngx-use"
       ],
       "@ngxUse/shared": [
-        "./dist/ng-use/shared"
+        "./dist/ngx-use/shared"
       ],
       "@ngxUse/shared/*": [
-        "./dist/ng-use/shared/*"
+        "./dist/ngx-use/shared/*"
       ],
       "@ngxUse/core": [
-        "./dist/ng-use/core"
+        "./dist/ngx-use/core"
       ],
       "@ngxUse/core/*": [
-        "./dist/ng-use/core/*"
+        "./dist/ngx-use/core/*"
       ],
     },
     "noFallthroughCasesInSwitch": true,
@@ -41,10 +41,10 @@
   "files": [],
   "references": [
     {
-      "path": "./projects/ng-use/tsconfig.lib.json"
+      "path": "./projects/ngx-use/tsconfig.lib.json"
     },
     {
-      "path": "./projects/ng-use/tsconfig.spec.json"
+      "path": "./projects/ngx-use/tsconfig.spec.json"
     }
   ]
 }
