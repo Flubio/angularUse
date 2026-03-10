@@ -1,7 +1,7 @@
-import { CreateGlobalState } from './ng-use';
+import { State } from './core/state/state'
 
-describe('ng-use public API', () => {
-  it('should export CreateGlobalState', () => {
-    expect(CreateGlobalState).toBeDefined();
-  });
-});
+describe('ngx-use public API', () => {
+  it('should export State', () => {
+    expect(State).toBeDefined()
+  })
+})

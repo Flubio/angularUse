@@ -6,20 +6,20 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "ngUse": {
+    "ngxUse": {
       "projectType": "library",
-      "root": "projects/ng-use",
-      "sourceRoot": "projects/ng-use/src",
+      "root": "projects/ngx-use",
+      "sourceRoot": "projects/ngx-use/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-use/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-use/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ng-use/tsconfig.lib.json"
+              "tsConfig": "projects/ngx-use/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
-            "tsConfig": "projects/ng-use/tsconfig.spec.json"
+            "tsConfig": "projects/ngx-use/tsconfig.spec.json"
           }
         }
       }

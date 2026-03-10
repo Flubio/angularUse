@@ -1,0 +1,3 @@
+{
+  "extends": "../ngx-use/tsconfig.spec.json"
+}

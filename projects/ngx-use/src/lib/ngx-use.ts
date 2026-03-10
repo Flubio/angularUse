@@ -1,2 +1,5 @@
 // State
-export * from './core/state/create-global-state/create-global-state'
+export * from './core/state/state'
+
+// DI
+export * from './core/di/typed-token'
